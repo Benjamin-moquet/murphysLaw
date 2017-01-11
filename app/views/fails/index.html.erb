@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fails</h1>
+<%= link_to 'Nouveau Fail', new_fail_path, class: "add-fail waves-effect waves-light btn" %>
+
+
+
+<div class="row">
+  <div class="col s12 m4">
+    <% @fails.each do |fail| %>
+      <div class="card">
+        <div class="card-image">
+          <div class="video-container">
+            <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="853" height="480" src="<%= fail.url %>" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <span class="card-title"><%= fail.title %></span>
+        </div>
+        <div class="card-action">
+          <a href="<%= fail.url %>" target="_blank">Voir le fail</a>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+
+<br>

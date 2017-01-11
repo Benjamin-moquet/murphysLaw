@@ -1,0 +1,2 @@
+class Fail < ApplicationRecord
+end

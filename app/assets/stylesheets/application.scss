@@ -1,0 +1,133 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "materialize";
+
+
+// CUSTOM CSS
+// Global
+body {
+	background-color: #EFF7D3;
+}
+a {
+	color: #7984EE!important;
+  &:hover {
+    background-color: transparent;
+    color: #7984EE;
+  }
+}
+h1,
+h2 {
+	text-align: center;
+	margin-top: 1em;
+	font-size: 6em;
+}
+.alert,
+.notice {
+	width: 75%;
+	margin: 3em auto 1em;
+}
+.alert {
+	color: #e74c3c;
+}
+.notice {
+	color: #27ae60;
+}
+.btn {
+	background-color: #A9D2FF;
+	&:hover {
+		background-color: #7984EE;
+	}
+}
+.btn-small {
+	font-size: .8em;
+	height: 32px;
+	line-height: 32px;
+}
+.add-fail {
+  color: #B2B2B2;
+  display: inherit;
+  margin: 0 auto;
+  width: 200px;
+  &:hover {
+    color: #FFF!important;
+  }
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+textarea:focus {
+	border-bottom-color: #7984EE!important;
+	box-shadow: 0 1px 0 0 #000!important;
+}
+// Overwriting materialize CSS framework (see the gem on the Gemfile)
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+	color: #A7B99E;
+}
+.card-title {
+  background-color: #B2B2B2;
+}
+
+// Header bar
+header {
+	height: 3em;
+	background-color: #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	h3 {
+		display: inline-block;
+		margin: 0;
+		margin-left: 1em;
+		font-size: 2.7em;
+	}
+	.right {
+		display: flex;
+		align-items: center;
+		margin-right: 1em;
+	}
+	.disconnect {
+		height: 1.5em;
+		vertical-align: middle;
+		margin-left: 1em;
+	}
+}
+
+// Post index page
+.row {
+	width: 90%;
+	margin: 3em auto 0;
+}
+
+
+// Login & Register
+.new_user,
+.new_fail,
+.edit_fail {
+	width: 40%;
+	display: block;
+	margin: 4em auto;
+	background-color: #FFF;
+	padding: 1.2em 1.7em;
+	border-radius: 5px;
+	@media screen and (max-width: 750px) {
+		width: 100%;
+	}
+	.btn {
+		width: 100%;
+		margin: .5em 0;
+	}
+}

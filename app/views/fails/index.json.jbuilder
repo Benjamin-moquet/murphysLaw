@@ -1,0 +1,1 @@
+json.array! @fails, partial: 'fails/fail', as: :fail

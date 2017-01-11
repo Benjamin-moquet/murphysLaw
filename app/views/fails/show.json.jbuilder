@@ -1,0 +1,1 @@
+json.partial! "fails/fail", fail: @fail
