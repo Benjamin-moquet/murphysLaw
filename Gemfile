@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-gem 'pg', group: :production
+gem 'pg', '~> 0.18.4', group: :production
 # Authentification gem (devise)
 gem 'devise'
 # Front-end framework
